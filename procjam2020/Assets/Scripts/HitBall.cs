@@ -19,15 +19,9 @@ public class HitBall : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
     }
 
-    public void Update()
-    {
-        
-    }
-
     public void FixedUpdate()
     {
         standsStill = false;
-        //Debug.Log(rigidbody.velocity.magnitude);
         if (rigidbody.velocity.magnitude < 0.1f)
         {
             standsStill = true;
@@ -38,10 +32,17 @@ public class HitBall : MonoBehaviour
     {
         if (standsStill)
         {
-            Debug.Log("Fire");
             Vector3 shotDirection = Vector3.ProjectOnPlane(cameraTransform.forward, Vector3.up).normalized;
             rigidbody.AddForce(shotDirection * shotPower);
             standsStill = true;
+        }
+    }
+
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (!standsStill)
+        {
+            rigidbody.AddForce(Vector3.up * 100f);
         }
     }
 }
