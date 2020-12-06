@@ -3,51 +3,107 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float smoothTime = 0.3f;
-    public Vector3 smoothVelocity;
-    public float rotationSensitivity = 100f;
+    public bool IsPoweradjusting { get => isPoweradjusting; }
 
     [SerializeField]
-    private Transform target;
+    private Transform cameraTransform;
     [SerializeField]
-    private Vector3 cameraOffset = Vector3.zero;
-    private Quaternion originalRotation = Quaternion.identity;
-    private float currentAngle = 0f;
-    private float addDelta;
+    private float shotPower = 800f;
+    [SerializeField]
+    private Powerbar powerbar;
+
+    private bool standsStill = false;
+    private float rotationSensitivity = 1f;
+    private bool isPoweradjusting = false;
+    private Rigidbody rigidbody;
 
     public void Start()
     {
-        if (target == null)
+        if (cameraTransform == null)
         {
-            Debug.LogError("missing target references");
+            Debug.LogError("no camera transform set");
+        }
+        if (powerbar == null)
+        {
+            Debug.LogError("missing powerbar");
         }
 
-        originalRotation = transform.localRotation;
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     public void Update()
     {
-        CalculateCurrentRotation();
-        CameraFollow();
+        if (standsStill || isPoweradjusting)
+        {
+            powerbar.setVisible(true);
+        }
+        else
+        {
+            powerbar.setVisible(false);
+        }
     }
 
-    public void LookAround(InputAction.CallbackContext context)
+    public void FixedUpdate()
     {
-        Vector2 lookAroundValue = context.ReadValue<Vector2>();
-        addDelta = lookAroundValue.x;
+        standsStill = false;
+
+        if (rigidbody.velocity.magnitude < 0.05f)
+        {
+            standsStill = true;
+            rigidbody.velocity = Vector3.zero;
+        }
     }
 
-    private void CalculateCurrentRotation()
+    public void Fire(InputAction.CallbackContext context)
     {
-        currentAngle += addDelta * Time.deltaTime * rotationSensitivity;
+        // todo only when standstill
+        if (context.phase == InputActionPhase.Performed)
+        {
+            Debug.Log("fire");
+            isPoweradjusting = false;
+            Vector3 shotDirection = Vector3.ProjectOnPlane(cameraTransform.forward, Vector3.up).normalized;
+            float power = Mathf.Max(10f, shotPower * powerbar.currentPowerNormalized);
+            rigidbody.AddForce(shotDirection * power);
+        }
+
     }
 
-    private void CameraFollow()
+    public void Jump(InputAction.CallbackContext context)
     {
-        transform.position = target.position;
-        Quaternion currentRotationQuaternion = Quaternion.Euler(0f, currentAngle, 0f);
-        transform.rotation = currentRotationQuaternion * originalRotation;
-        transform.position = transform.TransformPoint(cameraOffset);
+        if (!standsStill)
+        {
+            // todo only when on ground
+            rigidbody.AddForce(Vector3.up * 100f);
+        }
     }
 
+    public void Reset(InputAction.CallbackContext context)
+    {
+        //Debug.Log("reset");
+        rigidbody.velocity = Vector3.zero;
+        Vector3 newPosition = transform.position;
+        newPosition.y = 2f;
+        transform.position = newPosition;
+    }
+
+    public void AdjustPower(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            Debug.Log("poweradjust started");
+            isPoweradjusting = true;
+        }
+    }
+
+    public void AdjustPowerDirection(InputAction.CallbackContext context)
+    {
+        if (isPoweradjusting)
+        {
+            Vector2 lookAroundValue = context.ReadValue<Vector2>();
+            float deltaValue = lookAroundValue.x * Time.deltaTime * rotationSensitivity;
+            float currentPower = powerbar.currentPowerNormalized;
+            float newPower = Mathf.Clamp(currentPower + deltaValue, 0f, 1f);
+            powerbar.currentPowerNormalized = newPower;
+        }
+    }
 }
