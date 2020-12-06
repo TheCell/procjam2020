@@ -26,7 +26,7 @@ MonoBehaviour:
     - data: 0100000000000000
     - data: 0500000000000000
     Index: 0
-    PLogP: 23.025852
+    PLogP: 0
   - Name: solid R0
     Prototype: {fileID: 8263812809412713060, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Prefab: {fileID: 3738212215602927632, guid: 96cda957cd287364eaca2841f1110397, type: 3}
@@ -98,48 +98,48 @@ MonoBehaviour:
     Rotation: 0
     PossibleNeighbors:
     - data: e003000000000000
-    - data: 0200000000000000
+    - data: 1e00000000000000
     - data: e003000000000000
     - data: e003000000000000
     - data: 0100000000000000
     - data: e003000000000000
     Index: 6
     PLogP: 0
-  - Name: innerCorner R1
-    Prototype: {fileID: 2842766568628190930, guid: 96cda957cd287364eaca2841f1110397, type: 3}
-    Prefab: {fileID: 8884665673333656070, guid: 96cda957cd287364eaca2841f1110397, type: 3}
-    Rotation: 1
+  - Name: straight R0
+    Prototype: {fileID: 3199174129966262928, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Prefab: {fileID: 4272520787835447486, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Rotation: 0
     PossibleNeighbors:
+    - data: e001000000000000
+    - data: 1e00000000000000
     - data: e003000000000000
-    - data: 0400000000000000
-    - data: e003000000000000
-    - data: e003000000000000
+    - data: e001000000000000
     - data: 0100000000000000
     - data: e003000000000000
     Index: 7
     PLogP: 0
-  - Name: innerCorner R2
-    Prototype: {fileID: 2842766568628190930, guid: 96cda957cd287364eaca2841f1110397, type: 3}
-    Prefab: {fileID: 8884665673333656070, guid: 96cda957cd287364eaca2841f1110397, type: 3}
-    Rotation: 2
+  - Name: crest R0
+    Prototype: {fileID: 2594284002397078682, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Prefab: {fileID: 1308410480838205158, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Rotation: 0
     PossibleNeighbors:
+    - data: e001000000000000
+    - data: 1e00000000000000
     - data: e003000000000000
-    - data: 0800000000000000
-    - data: e003000000000000
-    - data: e003000000000000
+    - data: e001000000000000
     - data: 0100000000000000
     - data: e003000000000000
     Index: 8
     PLogP: 0
-  - Name: innerCorner R3
-    Prototype: {fileID: 2842766568628190930, guid: 96cda957cd287364eaca2841f1110397, type: 3}
-    Prefab: {fileID: 8884665673333656070, guid: 96cda957cd287364eaca2841f1110397, type: 3}
-    Rotation: 3
+  - Name: block R0
+    Prototype: {fileID: 806883649218187187, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Prefab: {fileID: 2111838887189814670, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Rotation: 0
     PossibleNeighbors:
+    - data: 6002000000000000
+    - data: 1e00000000000000
     - data: e003000000000000
-    - data: 1000000000000000
-    - data: e003000000000000
-    - data: e003000000000000
+    - data: 6002000000000000
     - data: 0100000000000000
     - data: e003000000000000
     Index: 9
