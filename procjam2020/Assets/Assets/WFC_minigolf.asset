@@ -20,7 +20,7 @@ MonoBehaviour:
     Rotation: 0
     PossibleNeighbors:
     - data: 0300000000000000
-    - data: e103000000000000
+    - data: e17f000000000000
     - data: 1100000000000000
     - data: 0900000000000000
     - data: 0100000000000000
@@ -36,7 +36,7 @@ MonoBehaviour:
     - data: 1e00000000000000
     - data: 0e00000000000000
     - data: 0900000000000000
-    - data: fe03000000000000
+    - data: fe7f000000000000
     - data: 1a00000000000000
     Index: 1
     PLogP: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
     - data: 1e00000000000000
     - data: 1100000000000000
     - data: 1600000000000000
-    - data: fe03000000000000
+    - data: fe7f000000000000
     - data: 1a00000000000000
     Index: 2
     PLogP: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
     - data: 1e00000000000000
     - data: 0e00000000000000
     - data: 1600000000000000
-    - data: fe03000000000000
+    - data: fe7f000000000000
     - data: 1a00000000000000
     Index: 3
     PLogP: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
     - data: 1e00000000000000
     - data: 0e00000000000000
     - data: 1600000000000000
-    - data: fe03000000000000
+    - data: fe7f000000000000
     - data: 0500000000000000
     Index: 4
     PLogP: 0
@@ -84,63 +84,128 @@ MonoBehaviour:
     Prefab: {fileID: 460825948294423510, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Rotation: 0
     PossibleNeighbors:
-    - data: e003000000000000
+    - data: e07f000000000000
     - data: 1e00000000000000
-    - data: e003000000000000
-    - data: e003000000000000
+    - data: e07f000000000000
+    - data: e07f000000000000
     - data: 0100000000000000
-    - data: e003000000000000
+    - data: e07f000000000000
     Index: 5
-    PLogP: 0
-  - Name: innerCorner R0
-    Prototype: {fileID: 2842766568628190930, guid: 96cda957cd287364eaca2841f1110397, type: 3}
-    Prefab: {fileID: 8884665673333656070, guid: 96cda957cd287364eaca2841f1110397, type: 3}
-    Rotation: 0
-    PossibleNeighbors:
-    - data: e003000000000000
-    - data: 1e00000000000000
-    - data: e003000000000000
-    - data: e003000000000000
-    - data: 0100000000000000
-    - data: e003000000000000
-    Index: 6
     PLogP: 0
   - Name: straight R0
     Prototype: {fileID: 3199174129966262928, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Prefab: {fileID: 4272520787835447486, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Rotation: 0
     PossibleNeighbors:
-    - data: e001000000000000
+    - data: 6019000000000000
     - data: 1e00000000000000
-    - data: e003000000000000
-    - data: e001000000000000
+    - data: 6035000000000000
+    - data: 6061000000000000
     - data: 0100000000000000
-    - data: e003000000000000
+    - data: 604d000000000000
+    Index: 6
+    PLogP: 0
+  - Name: straight_90 R0
+    Prototype: {fileID: 2170100263558078351, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Prefab: {fileID: 662884977343012257, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Rotation: 0
+    PossibleNeighbors:
+    - data: a066000000000000
+    - data: 1e00000000000000
+    - data: a04a000000000000
+    - data: a01e000000000000
+    - data: 0100000000000000
+    - data: a032000000000000
     Index: 7
     PLogP: 0
   - Name: crest R0
-    Prototype: {fileID: 2594284002397078682, guid: 96cda957cd287364eaca2841f1110397, type: 3}
-    Prefab: {fileID: 1308410480838205158, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Prototype: {fileID: 1780967712125974650, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Prefab: {fileID: 3359565865257034246, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Rotation: 0
     PossibleNeighbors:
-    - data: e001000000000000
+    - data: 6019000000000000
     - data: 1e00000000000000
-    - data: e003000000000000
-    - data: e001000000000000
+    - data: 6035000000000000
+    - data: 6061000000000000
     - data: 0100000000000000
-    - data: e003000000000000
+    - data: 604d000000000000
     Index: 8
+    PLogP: 0
+  - Name: crest_90 R0
+    Prototype: {fileID: 5055020896944427155, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Prefab: {fileID: 8074915998690806511, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Rotation: 0
+    PossibleNeighbors:
+    - data: a066000000000000
+    - data: 1e00000000000000
+    - data: a04a000000000000
+    - data: a01e000000000000
+    - data: 0100000000000000
+    - data: a032000000000000
+    Index: 9
     PLogP: 0
   - Name: block R0
     Prototype: {fileID: 806883649218187187, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Prefab: {fileID: 2111838887189814670, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Rotation: 0
     PossibleNeighbors:
-    - data: 6002000000000000
+    - data: a066000000000000
     - data: 1e00000000000000
-    - data: e003000000000000
-    - data: 6002000000000000
+    - data: 6035000000000000
+    - data: a01e000000000000
     - data: 0100000000000000
-    - data: e003000000000000
-    Index: 9
+    - data: 604d000000000000
+    Index: 10
     PLogP: 0
+  - Name: roundCornerB_edit R0
+    Prototype: {fileID: 5485877511438969948, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Prefab: {fileID: 3742778771933312063, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Rotation: 0
+    PossibleNeighbors:
+    - data: a066000000000000
+    - data: 1e00000000000000
+    - data: 6035000000000000
+    - data: 6061000000000000
+    - data: 0100000000000000
+    - data: a032000000000000
+    Index: 11
+    PLogP: -0.3465736
+  - Name: roundCornerB_edit_90 R0
+    Prototype: {fileID: 5820278835701983697, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Prefab: {fileID: 3392632406800806322, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Rotation: 0
+    PossibleNeighbors:
+    - data: a066000000000000
+    - data: 1e00000000000000
+    - data: a04a000000000000
+    - data: 6061000000000000
+    - data: 0100000000000000
+    - data: 604d000000000000
+    Index: 12
+    PLogP: -0.3465736
+  - Name: roundCornerB_edit_180 R0
+    Prototype: {fileID: 1339621156357077112, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Prefab: {fileID: 7874420431324209179, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Rotation: 0
+    PossibleNeighbors:
+    - data: 6019000000000000
+    - data: 1e00000000000000
+    - data: a04a000000000000
+    - data: a01e000000000000
+    - data: 0100000000000000
+    - data: 604d000000000000
+    Index: 13
+    PLogP: -0.3465736
+  - Name: roundCornerB_edit_270 R0
+    Prototype: {fileID: 6485871624491589710, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Prefab: {fileID: 2725438711900796973, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Rotation: 0
+    PossibleNeighbors:
+    - data: 6019000000000000
+    - data: 1e00000000000000
+    - data: 6035000000000000
+    - data: a01e000000000000
+    - data: 0100000000000000
+    - data: a032000000000000
+    Index: 14
+    PLogP: -0.3465736

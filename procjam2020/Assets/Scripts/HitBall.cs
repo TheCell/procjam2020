@@ -30,7 +30,8 @@ public class HitBall : MonoBehaviour
 
     public void Fire(InputAction.CallbackContext context)
     {
-        if (standsStill)
+        //if (standsStill)
+        if (true)
         {
             Vector3 shotDirection = Vector3.ProjectOnPlane(cameraTransform.forward, Vector3.up).normalized;
             rigidbody.AddForce(shotDirection * shotPower);
@@ -44,5 +45,13 @@ public class HitBall : MonoBehaviour
         {
             rigidbody.AddForce(Vector3.up * 100f);
         }
+    }
+
+    public void Reset(InputAction.CallbackContext context)
+    {
+        rigidbody.velocity = Vector3.zero;
+        Vector3 newPosition = transform.position;
+        newPosition.y = 2f;
+        transform.position = newPosition;
     }
 }
