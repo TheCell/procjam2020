@@ -20,7 +20,7 @@ MonoBehaviour:
     Rotation: 0
     PossibleNeighbors:
     - data: 0300000000000000
-    - data: e17f000000000000
+    - data: e1ff010000000000
     - data: 1100000000000000
     - data: 0900000000000000
     - data: 0100000000000000
@@ -36,7 +36,7 @@ MonoBehaviour:
     - data: 1e00000000000000
     - data: 0e00000000000000
     - data: 0900000000000000
-    - data: fe7f000000000000
+    - data: feff010000000000
     - data: 1a00000000000000
     Index: 1
     PLogP: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
     - data: 1e00000000000000
     - data: 1100000000000000
     - data: 1600000000000000
-    - data: fe7f000000000000
+    - data: feff010000000000
     - data: 1a00000000000000
     Index: 2
     PLogP: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
     - data: 1e00000000000000
     - data: 0e00000000000000
     - data: 1600000000000000
-    - data: fe7f000000000000
+    - data: feff010000000000
     - data: 1a00000000000000
     Index: 3
     PLogP: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
     - data: 1e00000000000000
     - data: 0e00000000000000
     - data: 1600000000000000
-    - data: fe7f000000000000
+    - data: feff010000000000
     - data: 0500000000000000
     Index: 4
     PLogP: 0
@@ -84,12 +84,12 @@ MonoBehaviour:
     Prefab: {fileID: 460825948294423510, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Rotation: 0
     PossibleNeighbors:
-    - data: e07f000000000000
+    - data: e0ff010000000000
     - data: 1e00000000000000
-    - data: e07f000000000000
-    - data: e07f000000000000
+    - data: e0ff010000000000
+    - data: e0ff010000000000
     - data: 0100000000000000
-    - data: e07f000000000000
+    - data: e0ff010000000000
     Index: 5
     PLogP: 0
   - Name: straight R0
@@ -97,12 +97,12 @@ MonoBehaviour:
     Prefab: {fileID: 4272520787835447486, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Rotation: 0
     PossibleNeighbors:
-    - data: 6019000000000000
+    - data: 6099000000000000
     - data: 1e00000000000000
-    - data: 6035000000000000
-    - data: 6061000000000000
+    - data: 60b5000000000000
+    - data: 60e1000000000000
     - data: 0100000000000000
-    - data: 604d000000000000
+    - data: 60cd000000000000
     Index: 6
     PLogP: 0
   - Name: straight_90 R0
@@ -110,12 +110,12 @@ MonoBehaviour:
     Prefab: {fileID: 662884977343012257, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Rotation: 0
     PossibleNeighbors:
-    - data: a066000000000000
+    - data: a066010000000000
     - data: 1e00000000000000
-    - data: a04a000000000000
-    - data: a01e000000000000
+    - data: a04a010000000000
+    - data: a01e010000000000
     - data: 0100000000000000
-    - data: a032000000000000
+    - data: a032010000000000
     Index: 7
     PLogP: 0
   - Name: crest R0
@@ -123,38 +123,38 @@ MonoBehaviour:
     Prefab: {fileID: 3359565865257034246, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Rotation: 0
     PossibleNeighbors:
-    - data: 6019000000000000
+    - data: 6099000000000000
     - data: 1e00000000000000
-    - data: 6035000000000000
-    - data: 6061000000000000
+    - data: 60b5000000000000
+    - data: 60e1000000000000
     - data: 0100000000000000
-    - data: 604d000000000000
+    - data: 60cd000000000000
     Index: 8
-    PLogP: 0
+    PLogP: -0.0460517
   - Name: crest_90 R0
     Prototype: {fileID: 5055020896944427155, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Prefab: {fileID: 8074915998690806511, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Rotation: 0
     PossibleNeighbors:
-    - data: a066000000000000
+    - data: a066010000000000
     - data: 1e00000000000000
-    - data: a04a000000000000
-    - data: a01e000000000000
+    - data: a04a010000000000
+    - data: a01e010000000000
     - data: 0100000000000000
-    - data: a032000000000000
+    - data: a032010000000000
     Index: 9
-    PLogP: 0
+    PLogP: -0.0460517
   - Name: block R0
     Prototype: {fileID: 806883649218187187, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Prefab: {fileID: 2111838887189814670, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Rotation: 0
     PossibleNeighbors:
-    - data: a066000000000000
+    - data: a066010000000000
     - data: 1e00000000000000
-    - data: 6035000000000000
-    - data: a01e000000000000
+    - data: 60b5000000000000
+    - data: a01e010000000000
     - data: 0100000000000000
-    - data: 604d000000000000
+    - data: 60cd000000000000
     Index: 10
     PLogP: 0
   - Name: roundCornerB_edit R0
@@ -162,12 +162,12 @@ MonoBehaviour:
     Prefab: {fileID: 3742778771933312063, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Rotation: 0
     PossibleNeighbors:
-    - data: a066000000000000
+    - data: a066010000000000
     - data: 1e00000000000000
-    - data: 6035000000000000
-    - data: 6061000000000000
+    - data: 60b5000000000000
+    - data: 60e1000000000000
     - data: 0100000000000000
-    - data: a032000000000000
+    - data: a032010000000000
     Index: 11
     PLogP: -0.3465736
   - Name: roundCornerB_edit_90 R0
@@ -175,12 +175,12 @@ MonoBehaviour:
     Prefab: {fileID: 3392632406800806322, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Rotation: 0
     PossibleNeighbors:
-    - data: a066000000000000
+    - data: a066010000000000
     - data: 1e00000000000000
-    - data: a04a000000000000
-    - data: 6061000000000000
+    - data: a04a010000000000
+    - data: 60e1000000000000
     - data: 0100000000000000
-    - data: 604d000000000000
+    - data: 60cd000000000000
     Index: 12
     PLogP: -0.3465736
   - Name: roundCornerB_edit_180 R0
@@ -188,12 +188,12 @@ MonoBehaviour:
     Prefab: {fileID: 7874420431324209179, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Rotation: 0
     PossibleNeighbors:
-    - data: 6019000000000000
+    - data: 6099000000000000
     - data: 1e00000000000000
-    - data: a04a000000000000
-    - data: a01e000000000000
+    - data: a04a010000000000
+    - data: a01e010000000000
     - data: 0100000000000000
-    - data: 604d000000000000
+    - data: 60cd000000000000
     Index: 13
     PLogP: -0.3465736
   - Name: roundCornerB_edit_270 R0
@@ -201,11 +201,37 @@ MonoBehaviour:
     Prefab: {fileID: 2725438711900796973, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Rotation: 0
     PossibleNeighbors:
-    - data: 6019000000000000
+    - data: 6099000000000000
     - data: 1e00000000000000
-    - data: 6035000000000000
-    - data: a01e000000000000
+    - data: 60b5000000000000
+    - data: a01e010000000000
     - data: 0100000000000000
-    - data: a032000000000000
+    - data: a032010000000000
     Index: 14
     PLogP: -0.3465736
+  - Name: gap R0
+    Prototype: {fileID: 6496536441656247425, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Prefab: {fileID: 3841906590894526211, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Rotation: 0
+    PossibleNeighbors:
+    - data: 6099000000000000
+    - data: 1e00000000000000
+    - data: 0030000000000000
+    - data: 60e1000000000000
+    - data: 0100000000000000
+    - data: 0048000000000000
+    Index: 15
+    PLogP: -0.36119187
+  - Name: gap_90 R0
+    Prototype: {fileID: 8098594901032858412, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Prefab: {fileID: 2241273012824799406, guid: 96cda957cd287364eaca2841f1110397, type: 3}
+    Rotation: 0
+    PossibleNeighbors:
+    - data: a066010000000000
+    - data: 1e00000000000000
+    - data: a04a010000000000
+    - data: a01e010000000000
+    - data: 0100000000000000
+    - data: a032010000000000
+    Index: 16
+    PLogP: -0.36119187
