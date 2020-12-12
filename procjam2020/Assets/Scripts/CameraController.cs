@@ -30,6 +30,8 @@ public class CameraController : MonoBehaviour
         }
 
         originalRotation = transform.localRotation;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void Update()
