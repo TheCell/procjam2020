@@ -221,7 +221,7 @@ MonoBehaviour:
     - data: 0100000000000000
     - data: 0048000000000000
     Index: 15
-    PLogP: -0.36119187
+    PLogP: 0
   - Name: gap_90 R0
     Prototype: {fileID: 8098594901032858412, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Prefab: {fileID: 2241273012824799406, guid: 96cda957cd287364eaca2841f1110397, type: 3}
@@ -234,7 +234,7 @@ MonoBehaviour:
     - data: 0100000000000000
     - data: a032030000000000
     Index: 16
-    PLogP: -0.36119187
+    PLogP: 0
   - Name: hole R0
     Prototype: {fileID: 4227301348009290235, guid: 96cda957cd287364eaca2841f1110397, type: 3}
     Prefab: {fileID: 5143319802862276194, guid: 96cda957cd287364eaca2841f1110397, type: 3}

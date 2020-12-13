@@ -20,9 +20,8 @@ public class PlayerController : MonoBehaviour
     private float rotationSensitivity = 1f;
     private bool isPoweradjusting = false;
     private Rigidbody rigidbody;
-    private Vector3 lastStandstillPosition;
+    private Vector3 lastStandstillPosition = Vector3.zero;
 
-    private bool newGameJustStarted = true;
     private GameEndAndRestart gameEndAndRestart;
     private TrailRenderer trailRenderer;
 
@@ -40,7 +39,6 @@ public class PlayerController : MonoBehaviour
         gameEndAndRestart = FindObjectOfType<GameEndAndRestart>();
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.velocity = new Vector3(0, -0.1f, 0);
-        lastStandstillPosition = transform.position;
         distanceToGround = GetComponent<Collider>().bounds.extents.y;
         trailRenderer = GetComponent<TrailRenderer>();
         trailRenderer.emitting = false;
@@ -68,7 +66,6 @@ public class PlayerController : MonoBehaviour
             standsStill = true;
             rigidbody.velocity = Vector3.zero;
             lastStandstillPosition = rigidbody.transform.position;
-            newGameJustStarted = false;
         }
 
         if (Physics.Raycast(transform.position, Vector3.down, distanceToGround + 0.1f))
@@ -104,11 +101,6 @@ public class PlayerController : MonoBehaviour
 
     public void Reset(InputAction.CallbackContext context)
     {
-        if (newGameJustStarted)
-        {
-            gameEndAndRestart.FinishGame();
-        }
-        rigidbody.velocity = Vector3.zero;
         ResetPosition();
     }
 
@@ -134,6 +126,14 @@ public class PlayerController : MonoBehaviour
 
     public void ResetPosition()
     {
+        if (lastStandstillPosition == Vector3.zero)
+        {
+            gameEndAndRestart.FinishGame();
+            gameEndAndRestart.NewGame();
+        }
+
+        rigidbody.velocity = Vector3.zero;
+        rigidbody.angularVelocity = Vector3.zero;
         Vector3 newPosition = lastStandstillPosition;
         newPosition.y = 2f;
         transform.position = newPosition;

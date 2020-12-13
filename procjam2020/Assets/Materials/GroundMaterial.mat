@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BallMaterial
+  m_Name: GroundMaterial
   m_Shader: {fileID: -6465566751694194690, guid: f19e343bf9cbac64d8ac5b0af6d160f3, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - Vector1_B2FDCB84: 0
+    - Vector1_B2FDCB84: 1
     m_Colors:
-    - Color_EFB39C18: {r: 0.8773585, g: 0.5459144, b: 0.36832502, a: 0}
+    - Color_EFB39C18: {r: 0.21867204, g: 0.735849, b: 0.25121847, a: 0}
   m_BuildTextureStacks: []

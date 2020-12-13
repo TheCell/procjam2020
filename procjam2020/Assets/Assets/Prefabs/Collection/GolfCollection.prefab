@@ -444,7 +444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9084605606519367485, guid: b4370e06568bf2744994fa4cb773d270, type: 3}
       propertyPath: Probability
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4370e06568bf2744994fa4cb773d270, type: 3}
@@ -572,7 +572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5449033286336409073, guid: 3fa5fd8295dcb664e89937f34a05bdd1, type: 3}
       propertyPath: Probability
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fa5fd8295dcb664e89937f34a05bdd1, type: 3}

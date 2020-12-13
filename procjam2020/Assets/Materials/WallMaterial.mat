@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_GolfShader
+  m_Name: WallMaterial
   m_Shader: {fileID: -6465566751694194690, guid: f19e343bf9cbac64d8ac5b0af6d160f3, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -19,6 +19,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs: []
-    m_Floats: []
-    m_Colors: []
+    m_Floats:
+    - Vector1_B2FDCB84: 0
+    m_Colors:
+    - Color_EFB39C18: {r: 0.7372549, g: 0.3186305, b: 0.21960782, a: 0}
   m_BuildTextureStacks: []
