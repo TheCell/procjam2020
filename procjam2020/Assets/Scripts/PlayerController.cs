@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
 
     private GameEndAndRestart gameEndAndRestart;
     private TrailRenderer trailRenderer;
+    private AudioSource audioSource;
 
     public void Start()
     {
@@ -40,8 +41,11 @@ public class PlayerController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.velocity = new Vector3(0, -0.1f, 0);
         distanceToGround = GetComponent<Collider>().bounds.extents.y;
+
         trailRenderer = GetComponent<TrailRenderer>();
         trailRenderer.emitting = false;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void Update()
@@ -87,6 +91,7 @@ public class PlayerController : MonoBehaviour
             Vector3 shotDirection = Vector3.ProjectOnPlane(cameraTransform.forward, Vector3.up).normalized;
             float power = Mathf.Max(10f, shotPower * powerbar.currentPowerNormalized);
             rigidbody.AddForce(shotDirection * power);
+            audioSource.Play();
         }
 
     }
