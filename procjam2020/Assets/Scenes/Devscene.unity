@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &152969367
 RectTransform:
   m_ObjectHideFlags: 0
@@ -149,7 +149,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152969366}
   m_LocalRotation: {x: -0.17364816, y: -0, z: -0, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 0, z: 24.5}
+  m_LocalPosition: {x: 0, y: 0, z: 1.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1677605870}
@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22.47, y: 10.2}
+  m_AnchoredPosition: {x: -22.47, y: 1.85}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &152969368
@@ -207,8 +207,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 4
+  m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -566,6 +566,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1677605872}
+        m_TargetAssemblyTypeName: GameEndAndRestart, Assembly-CSharp
+        m_MethodName: NewGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 883abe01-b62e-40cc-a5a3-8d696811175b
     m_ActionName: Player/Reset[/Keyboard/r]
   - m_PersistentCalls:
@@ -584,6 +596,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0385b45b-d639-4dc5-940d-e7e15f9ec1c1
     m_ActionName: Player/AdjustPower[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1677605872}
+        m_TargetAssemblyTypeName: GameEndAndRestart, Assembly-CSharp
+        m_MethodName: CloseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 06fc7fb6-5137-40c8-8a75-da384d4225e5
+    m_ActionName: Player/CloseGame[/Keyboard/escape,/XInputControllerWindows/start]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -992,6 +1020,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1677605870}
   - component: {fileID: 1677605871}
+  - component: {fileID: 1677605872}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -1028,6 +1057,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiScoreText: {fileID: 463752746}
+--- !u!114 &1677605872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677605869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 318190fc3cf2e76408a0c8df87f88990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finishText: {fileID: 152969368}
+  shotCounter: {fileID: 1677605871}
 --- !u!1 &1848983059
 GameObject:
   m_ObjectHideFlags: 0

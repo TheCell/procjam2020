@@ -52,6 +52,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press"
+                },
+                {
+                    "name": "CloseGame",
+                    "type": "Button",
+                    "id": "06fc7fb6-5137-40c8-8a75-da384d4225e5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -316,6 +324,28 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "AdjustPower",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bc447ccd-9efe-44e5-bfec-3c4ce8528e5e",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "CloseGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f63b244f-75b2-40a1-b44a-189e3d6e66bd",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "CloseGame",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -2,9 +2,12 @@
 
 public class ShotCounter : MonoBehaviour
 {
+    public uint HitCount { get => hitCount; }
+
     [SerializeField]
     private TMPro.TextMeshPro uiScoreText;
     private uint hitCount;
+
 
     public void Start()
     {
