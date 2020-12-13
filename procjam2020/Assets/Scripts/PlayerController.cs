@@ -15,9 +15,16 @@ public class PlayerController : MonoBehaviour
     private ShotCounter shotcounter;
 
     private bool standsStill = false;
+    private bool isGrounded = false;
+    private float distanceToGround;
     private float rotationSensitivity = 1f;
     private bool isPoweradjusting = false;
     private Rigidbody rigidbody;
+    private Vector3 lastStandstillPosition;
+
+    private bool newGameJustStarted = true;
+    private GameEndAndRestart gameEndAndRestart;
+    private TrailRenderer trailRenderer;
 
     public void Start()
     {
@@ -30,7 +37,13 @@ public class PlayerController : MonoBehaviour
             Debug.LogError("missing powerbar");
         }
 
+        gameEndAndRestart = FindObjectOfType<GameEndAndRestart>();
         rigidbody = GetComponent<Rigidbody>();
+        rigidbody.velocity = new Vector3(0, -0.1f, 0);
+        lastStandstillPosition = transform.position;
+        distanceToGround = GetComponent<Collider>().bounds.extents.y;
+        trailRenderer = GetComponent<TrailRenderer>();
+        trailRenderer.emitting = false;
     }
 
     public void Update()
@@ -51,17 +64,27 @@ public class PlayerController : MonoBehaviour
 
         if (rigidbody.velocity.magnitude < 0.05f)
         {
+            trailRenderer.emitting = true;
             standsStill = true;
             rigidbody.velocity = Vector3.zero;
+            lastStandstillPosition = rigidbody.transform.position;
+            newGameJustStarted = false;
+        }
+
+        if (Physics.Raycast(transform.position, Vector3.down, distanceToGround + 0.1f))
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
         }
     }
 
     public void Fire(InputAction.CallbackContext context)
     {
-        // todo only when standstill
-        if (context.phase == InputActionPhase.Performed)
+        if (standsStill && context.phase == InputActionPhase.Performed)
         {
-            //Debug.Log("fire");
             shotcounter.AddHit();
             isPoweradjusting = false;
             Vector3 shotDirection = Vector3.ProjectOnPlane(cameraTransform.forward, Vector3.up).normalized;
@@ -73,27 +96,26 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (!standsStill)
+        if (!standsStill && isGrounded)
         {
-            // todo only when on ground
             rigidbody.AddForce(Vector3.up * 100f);
         }
     }
 
     public void Reset(InputAction.CallbackContext context)
     {
-        //Debug.Log("reset");
+        if (newGameJustStarted)
+        {
+            gameEndAndRestart.FinishGame();
+        }
         rigidbody.velocity = Vector3.zero;
-        Vector3 newPosition = transform.position;
-        newPosition.y = 2f;
-        transform.position = newPosition;
+        ResetPosition();
     }
 
     public void AdjustPower(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Started)
+        if (standsStill && context.phase == InputActionPhase.Started)
         {
-            Debug.Log("poweradjust started");
             isPoweradjusting = true;
         }
     }
@@ -108,5 +130,12 @@ public class PlayerController : MonoBehaviour
             float newPower = Mathf.Clamp(currentPower + deltaValue, 0f, 1f);
             powerbar.currentPowerNormalized = newPower;
         }
+    }
+
+    public void ResetPosition()
+    {
+        Vector3 newPosition = lastStandstillPosition;
+        newPosition.y = 2f;
+        transform.position = newPosition;
     }
 }
