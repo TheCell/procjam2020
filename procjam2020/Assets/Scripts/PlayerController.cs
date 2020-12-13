@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     private float shotPower = 800f;
     [SerializeField]
     private Powerbar powerbar;
+    [SerializeField]
+    private ShotCounter shotcounter;
 
     private bool standsStill = false;
     private float rotationSensitivity = 1f;
@@ -59,7 +61,8 @@ public class PlayerController : MonoBehaviour
         // todo only when standstill
         if (context.phase == InputActionPhase.Performed)
         {
-            Debug.Log("fire");
+            //Debug.Log("fire");
+            shotcounter.AddHit();
             isPoweradjusting = false;
             Vector3 shotDirection = Vector3.ProjectOnPlane(cameraTransform.forward, Vector3.up).normalized;
             float power = Mathf.Max(10f, shotPower * powerbar.currentPowerNormalized);
